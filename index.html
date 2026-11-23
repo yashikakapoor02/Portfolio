@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Yashika Kapoor">
+<meta name="description" content="Yashika Kapoor — Computer Engineering student at York University, Quality Engineering Intern at Aviva.">
+<title>Yashika Kapoor | Engineering Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fafc;--surface:#fff;--surface2:#eef3f8;--navy:#142b4a;--navy2:#203f63;--blue:#5c83ad;--blue2:#dce8f4;--ink:#243246;--muted:#65758a;--line:#dce4ed;--shadow:0 14px 40px rgba(25,48,76,.07);--radius:20px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "DM Sans",sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--navy2);text-underline-offset:4px}a:hover{color:var(--blue)}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(248,250,252,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em}.monogram{width:42px;height:42px;border-radius:13px;background:var(--navy);color:white;display:grid;place-items:center;font-size:14px;letter-spacing:0}.brand span:last-child{font-size:17px}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--navy)}.navlinks .contact-link{background:var(--navy);color:white;padding:10px 17px;border-radius:999px}.menu{display:none;border:1px solid var(--line);background:white;color:var(--navy);border-radius:10px;padding:9px 12px;font-weight:700}
+.hero{padding:92px 0 76px;background:radial-gradient(ellipse at 85% 10%,#e8f0f8 0,transparent 34%),linear-gradient(180deg,#f8fafc 0%,#f4f7fb 100%);border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:64px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}.eyebrow:before{content:"";width:25px;height:2px;background:var(--blue)}h1,h2,h3{font-family:Manrope,sans-serif;color:var(--navy);line-height:1.16;letter-spacing:-.04em;margin:0}h1{font-size:clamp(48px,7vw,82px);font-weight:800;margin:22px 0 20px;max-width:760px}h1 em{font-style:normal;color:var(--blue)}.hero p{font-size:19px;max-width:650px;color:#52647a;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--navy);transition:.2s}.btn.primary{background:var(--navy);color:white}.btn.primary:hover{background:var(--navy2);transform:translateY(-2px)}.btn.secondary{color:var(--navy);background:transparent}.btn.secondary:hover{background:var(--blue2)}.profile-card{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.profile-top{display:flex;align-items:center;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}.avatar{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;background:var(--blue2);color:var(--navy);font:800 18px Manrope}.profile-top strong{display:block;color:var(--navy);font:800 17px Manrope}.profile-top small{color:var(--muted);font-size:13px}.status{display:flex;align-items:center;gap:8px;color:#3f6f62;font-size:12px;font-weight:700;margin-top:22px}.dot{width:8px;height:8px;background:#5e9a83;border-radius:50%}.quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.fact{padding:14px;background:var(--surface2);border-radius:13px}.fact small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.fact b{display:block;color:var(--navy);font:700 14px Manrope;margin-top:5px}
+section{padding:82px 0}.section-head{max-width:700px;margin-bottom:34px}.section-head h2{font-size:clamp(32px,4vw,45px);margin:13px 0}.section-head p{color:var(--muted);margin:0}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px}.prose p{margin:0 0 15px;color:#526176}.info-card,.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 5px 22px rgba(25,48,76,.035)}.info-card h3,.card h3{font-size:19px;margin-bottom:16px}.detail{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-top:1px solid var(--line);font-size:14px}.detail:first-of-type{border-top:0}.detail span:first-child{color:var(--muted)}.detail strong{text-align:right;color:var(--navy)}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}.skill{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:19px}.skill h3{font-size:15px;margin-bottom:10px}.skill p{font-size:13px;color:var(--muted);margin:0}
+.alt{background:#f0f4f8;border-block:1px solid var(--line)}.timeline{display:grid;grid-template-columns:210px 1fr;gap:28px;padding:28px 0;border-top:1px solid #d7e0e9}.timeline:first-of-type{border-top:0}.date{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:800}.timeline h3{font-size:22px;margin-bottom:5px}.org{color:var(--muted);font-weight:600;margin-bottom:13px}.timeline p{margin:0 0 12px;color:#526176}.list{margin:0;padding-left:20px;color:#526176}.list li{margin:6px 0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tag{font-size:11px;font-weight:700;color:#456789;background:var(--blue2);padding:5px 10px;border-radius:999px}
+.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.goal-card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}.number{font:800 13px Manrope;color:var(--blue);letter-spacing:.1em}.goal-card h3{font-size:20px;margin:12px 0}.goal-card p{font-size:14px;color:var(--muted);margin:0}.focus{margin-top:22px;padding:25px 28px;border-radius:18px;background:var(--navy);color:#e8eff7}.focus h3{color:white;font-size:21px;margin-bottom:9px}.focus p{margin:0;color:#d1deeb}
+.reflection{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.reflection .card{box-shadow:none}.reflection h3{font-size:20px;margin-bottom:10px}.reflection p{font-size:14px;color:var(--muted);margin:0}.reflection .label{color:var(--blue);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:10px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 24px rgba(25,48,76,.04)}.project-top{height:9px;background:linear-gradient(90deg,var(--navy),#8eaccb)}.project-content{padding:25px}.project-meta{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:800}.project h3{font-size:22px;margin:10px 0}.project p{color:var(--muted);font-size:14px;margin:0 0 14px}.project h4{font:800 11px Manrope;color:var(--navy);text-transform:uppercase;letter-spacing:.1em;margin:18px 0 7px}.project ul{margin:0;padding-left:18px;color:#526176;font-size:13px}.project li{margin:5px 0}.project .tags{margin-top:18px}
+.contact{background:var(--navy);color:#e5edf6}.contact .section-head h2{color:white}.contact .section-head p{color:#c0cede}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-box{border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:24px;background:rgba(255,255,255,.06)}.contact-box small{display:block;color:#a9bfd7;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:11px}.contact-box h3{color:white;font-size:20px;margin:8px 0}.contact-box a{color:#d6e7f8}.contact-box p{margin:0;color:#d6e0ec;font-size:14px}
+footer{padding:25px 0;background:#10233d;color:#b6c5d6;font-size:13px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.foot strong{color:white;font-family:Manrope}
+@media(max-width:900px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:30px}.profile-card{max-width:560px}.skills{grid-template-columns:repeat(2,1fr)}.goal-grid{grid-template-columns:1fr 1fr}.navlinks{gap:14px}.navlinks a{font-size:12px}}
+@media(max-width:680px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:66px}.menu{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:12px 20px 20px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 4px}.navlinks .contact-link{text-align:center;margin-top:8px}.hero{padding:64px 0 55px}h1{font-size:48px}.hero p{font-size:17px}section{padding:62px 0}.skills,.goal-grid,.reflection,.project-grid,.contact-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr;gap:8px}.quickfacts{gap:10px}.profile-card{padding:21px}.section-head{margin-bottom:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Yashika Kapoor home"><span class="monogram">YK</span><span>Yashika Kapoor</span></a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#experience">Career</a><a href="#goals">Goals</a><a href="#reflections">Reflections</a><a href="#projects">Projects</a><a href="resume.html">Resume</a><a class="contact-link" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="home">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      
+      <h1>Building technology is one thing. <em>Making it reliable</em> is another.</h1>
+      <p>I'm Yashika Kapoor, a Computer Engineering student at York University and a Quality Engineering Intern at Aviva. I'm interested in software quality, backend development and building systems that work as expected.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my projects</a><a class="btn secondary" href="resume.html">View my resume ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    </div>
+    <aside class="profile-card">
+      <div class="profile-top"><div class="avatar">YK</div><div><strong>Yashika Kapoor</strong><small>Engineering student · Intern</small></div></div>
+      <div class="status"><span class="dot"></span> Quality Engineering Intern at Aviva</div>
+      <div class="quickfacts"><div class="fact"><small>University</small><b>York University</b></div><div class="fact"><small>Program</small><b>Computer Engineering</b></div><div class="fact"><small>Expected graduation</small><b>April 2028</b></div><div class="fact"><small>Based in</small><b>Ontario, Canada</b></div></div>
+    </aside>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">01 · About me</span><h2>A little about my journey.</h2><p>My background, what I am learning and the direction I want to grow in.</p></div>
+    <div class="about-grid">
+      <div class="prose">
+        <p>I'm pursuing a Bachelor of Engineering in Computer Engineering at York University's Lassonde School of Engineering. Through coursework and projects, I've explored software development, embedded systems, programming and working with data.</p>
+        <p>My current role as a Quality Engineering Intern at Aviva is giving me the opportunity to learn how software is tested in a professional environment. I'm developing my understanding of test cases, defect reporting, test results and how quality engineers work with developers.</p>
+        <p>I enjoy understanding how systems work, solving problems step by step and improving my technical skills through hands-on experience. I'm particularly interested in software quality engineering and software development.</p>
+      </div>
+      <div class="info-card"><h3>Education</h3><div class="detail"><span>Degree</span><strong>Bachelor of Engineering</strong></div><div class="detail"><span>Program</span><strong>Computer Engineering</strong></div><div class="detail"><span>Institution</span><strong>York University</strong></div><div class="detail"><span>School</span><strong>Lassonde School of Engineering</strong></div><div class="detail"><span>Expected graduation</span><strong>April 2028</strong></div></div>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Programming</h3><p>Java, Python, C/C++, SQL, MATLAB</p></div>
+      <div class="skill"><h3>Software &amp; backend</h3><p>Spring Boot, REST APIs, MySQL, FastAPI</p></div>
+      <div class="skill"><h3>Testing &amp; tools</h3><p>Playwright, Selenium, Git, GitHub, Postman</p></div>
+      <div class="skill"><h3>AI &amp; data</h3><p>RAG, LangChain, ChromaDB, embeddings</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="experience">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">02 · Career</span><h2>Learning through experience.</h2><p>My education and current co-op experience are helping me connect classroom concepts with professional engineering practices.</p></div>
+    <div class="timeline"><div class="date">Fall 2026 – Winter 2027</div><div><h3>Quality Engineering Intern</h3><div class="org">Aviva · Canada</div><p>Working as part of a Quality Engineering team and developing practical experience with software testing and team workflows.</p><ul class="list"><li>Writing, reviewing and executing test cases to check that software behaves as expected.</li><li>Identifying and reporting defects and communicating findings to support investigation.</li><li>Analyzing test results and working with developers as part of the quality process.</li><li>Building familiarity with test automation tools, including Selenium and Playwright.</li></ul><div class="tags"><span class="tag">Quality Engineering</span><span class="tag">Test cases</span><span class="tag">Defect reporting</span><span class="tag">Playwright</span><span class="tag">Selenium</span></div></div></div>
+    <div class="timeline"><div class="date">September 2024 – Present</div><div><h3>Bachelor of Engineering, Computer Engineering</h3><div class="org">York University · Lassonde School of Engineering</div><p>Coursework and hands-on projects have included object-oriented programming, data structures, embedded systems, software development and engineering problem-solving.</p></div></div>
+  </div>
+</section>
+
+<section id="goals">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">03 · Goals &amp; portfolios</span><h2>Where I want to grow.</h2><p>My interests, strengths and development priorities shape the kind of engineer I want to become.</p></div>
+    <div class="prose"><p>I chose Computer Engineering because it brings together software and hardware and gives me the opportunity to understand how technology works at different levels. I enjoy moving from an idea to a working system, testing it and figuring out how to improve it.</p></div>
+    <div class="goal-grid" style="margin-top:28px">
+      <article class="goal-card"><span class="number">01 · CAREER DIRECTION</span><h3>Software quality engineering</h3><p>Continue developing my testing skills and learn how automation, careful test design and collaboration contribute to reliable software.</p></article>
+      <article class="goal-card"><span class="number">02 · TECHNICAL GROWTH</span><h3>Build stronger software skills</h3><p>Strengthen my foundations in Java, backend development, APIs, databases and test automation through coursework and practical projects.</p></article>
+      <article class="goal-card"><span class="number">03 · LONG-TERM INTEREST</span><h3>Explore intelligent systems</h3><p>Keep learning about AI-enabled applications and how technologies such as retrieval-augmented generation can be used in practical software systems.</p></article>
+    </div>
+    <div class="focus"><h3>My personal development priorities</h3><p>I'm working on critical thinking and problem solving by breaking issues into smaller parts and using approaches such as the 5 Whys. I also want to keep improving my communication, especially when explaining test findings, and strengthen collaboration by learning from teammates and contributing clearly during team discussions.</p></div>
+  </div>
+</section>
+
+<section class="alt" id="reflections">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">04 · Reflections</span><h2>What I am learning along the way.</h2><p>Reflection helps me connect my experiences to the skills I want to develop as an engineer.</p></div>
+    <div class="reflection">
+      <article class="card"><div class="label">Co-op learning · Aviva</div><h3>Understanding software quality</h3><p>My co-op experience is helping me see that testing is more than checking whether a feature works. It involves understanding expected behaviour, reviewing test cases, documenting defects clearly and communicating with developers. As I continue in the role, I want to become more confident in explaining test results and understanding the reasoning behind test coverage.</p></article>
+      <article class="card"><div class="label">Problem solving</div><h3>Learning to investigate, not guess</h3><p>Engineering projects have shown me the importance of breaking a problem into smaller steps, testing assumptions and using evidence to find the source of an issue. I want to apply this approach more consistently, including techniques such as the 5 Whys.</p></article>
+      <article class="card"><div class="label">Communication &amp; teamwork</div><h3>Making technical work understandable</h3><p>Working on projects and learning in a team environment has reinforced that technical knowledge is only part of engineering. Explaining an issue clearly, listening to other perspectives and sharing progress are also important parts of completing work effectively.</p></article>
+      <article class="card"><div class="label">Looking ahead</div><h3>Turning feedback into progress</h3><p>I want to use feedback from coursework, project work and my co-op placement to identify what I should improve next. My focus is on building confidence through practice while staying open to learning new tools and approaches.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">05 · Course projects</span><h2>Projects that put ideas into practice.</h2><p>A selection of academic and technical projects that helped me explore software, embedded systems and application development.</p></div>
+    <div class="project-grid">
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Embedded systems · Arduino</div><h3>Automatic Plant Watering System</h3><p>A system that monitors soil moisture and controls a water pump based on sensor readings.</p><h4>What I worked on</h4><ul><li>Used soil moisture sensor readings to inform watering decisions.</li><li>Implemented event-driven Java control logic for system states.</li><li>Used serial output and a multimeter to help debug system behaviour.</li><li>Used MATLAB to graph moisture readings over time.</li></ul><div class="tags"><span class="tag">Arduino</span><span class="tag">Java</span><span class="tag">MATLAB</span><span class="tag">Sensors</span><span class="tag">Debugging</span></div></div></article>
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Embedded C · KL43Z</div><h3>Vehicle Speed Monitoring System</h3><p>An embedded system that estimates vehicle speed using sensor input and provides an alert when a configured speed limit is exceeded.</p><h4>What I worked on</h4><ul><li>Used dual time-of-flight sensors and hardware timers to measure speed.</li><li>Worked with GPIO interrupts and an ADC input for speed-limit control.</li><li>Implemented an LED alert for overspeed conditions.</li><li>Used UART communication to send structured data to a Linux system for logging.</li></ul><div class="tags"><span class="tag">Embedded C</span><span class="tag">KL43Z</span><span class="tag">UART</span><span class="tag">Linux</span></div></div></article>
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Backend · Generative AI</div><h3>Enterprise Knowledge Assistant</h3><p>A retrieval-augmented generation (RAG) application designed to help users retrieve information from a document knowledge base.</p><h4>Technologies explored</h4><ul><li>Used Python and LangChain as part of the application workflow.</li><li>Worked with document processing and a ChromaDB vector store.</li><li>Used FastAPI for backend integration and the OpenAI API for language-model functionality.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span><span class="tag">RAG</span></div></div></article>
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Application development · Java</div><h3>Library Management System</h3><p>A console-based application for managing library records and common book-lending tasks.</p><h4>What I worked on</h4><ul><li>Implemented create, read, update and delete operations.</li><li>Added search functionality for finding library records.</li><li>Used Java Collections and file input/output for data handling.</li><li>Implemented loan and return workflows.</li></ul><div class="tags"><span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Collections</span><span class="tag">File I/O</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">06 · Contact</span><h2>Let's connect.</h2><p>I'm happy to connect about engineering, software quality, projects and opportunities to learn and grow.</p></div>
+    <div class="contact-grid">
+      <div class="contact-box"><small>Email</small><h3>Get in touch</h3><p><a href="mailto:yashikakapoor2006@gmail.com">yashikakapoor2006@gmail.com</a></p></div>
+      <div class="contact-box"><small>LinkedIn</small><h3>Professional profile</h3><p><a href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">linkedin.com/in/yashika-kapoor-958767329 ↗</a></p></div>
+      <div class="contact-box"><small>GitHub</small><h3>Code and projects</h3><p><a href="https://github.com/yashikakapoor02" target="_blank" rel="noopener">github.com/yashikakapoor02 ↗</a></p></div>
+      <div class="contact-box"><small>Location</small><h3>Ontario, Canada</h3><p>York University · Lassonde School of Engineering</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap foot"><span><strong>Yashika Kapoor</strong> · Computer Engineering</span><span>Portfolio · Updated November 2026</span></div></footer>
+<script>
+const menu=document.getElementById('menu'), nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';}));
+</script>
+</body>
+</html>
