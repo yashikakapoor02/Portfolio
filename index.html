@@ -2,793 +2,141 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Yashika Kapoor">
-<meta name="description" content="ePortfolio of Yashika Kapoor, Computer Engineering student at York University.">
-<title>Yashika Kapoor ePortfolio</title>
+<meta name="description" content="Yashika Kapoor — Computer Engineering student at York University, Quality Engineering Intern at Aviva.">
+<title>Yashika Kapoor | Engineering Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  color-scheme:light;
-  --paper:#F4EFE4; --paper-2:#EAE2D2; --card:#F9F5ED; --ink:#1B1814; --ink-2:#2A251F;
-  --muted:#675F55; --line:#D6CCB9; --rust:#A0441C; --rust-soft:#F1E1D2;
-  --grid:rgba(27,24,20,.055); --hl:#F5E1A0; --hl-ink:#6E4B08;
-  --serif:"Fraunces", Georgia, "Times New Roman", serif;
-  --sans:"Manrope", "Segoe UI", system-ui, sans-serif;
-  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
-  --wrap:1240px; --gut:clamp(16px,4vw,48px);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--rust);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--rust);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
-h4{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
-p{margin:0}
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
-.mono{font-family:var(--mono)}
-.eyebrow{display:block;font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:18px}
-
-/* ---------- header ---------- */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--paper);border-bottom:2px solid var(--ink)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:74px}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
-.mark{width:42px;height:42px;border-radius:7px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--mono);font-weight:500;font-size:14px;flex:none}
-.brand b{display:block;font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.1}
-.brand small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.mainnav{display:flex;gap:26px}
-.mainnav a{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;padding:6px 0;border-bottom:1.5px solid transparent}
-.mainnav a span{color:var(--muted);margin-right:6px}
-.mainnav a:hover,.mainnav a.on{color:var(--rust);border-bottom-color:var(--rust)}
-.mainnav a.on span{color:var(--rust)}
-.menuBtn{display:none}
-
-/* ---------- buttons ---------- */
-.btn-row{display:flex;flex-wrap:wrap;gap:12px}
-.pill{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 24px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer}
-.pill.dark{background:var(--ink);color:var(--paper)}
-.pill.dark:hover{background:var(--rust);border-color:var(--rust)}
-.pill.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.pill.ghost:hover{border-color:var(--ink)}
-.pill svg{width:18px;height:18px}
-button.btn{font:600 12.5px var(--sans);padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
-button.btn:hover{border-color:var(--ink)}
-
-/* ---------- home ---------- */
-.hero{border-bottom:2px solid var(--ink);background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:34px 34px;background-position:-1px -1px}
-.hero .wrap{padding-block:clamp(56px,9vw,104px) clamp(56px,8vw,96px)}
-.hero h1{font-size:clamp(60px,11vw,148px);font-weight:600;letter-spacing:-.04em;line-height:.9;font-variation-settings:"opsz" 144}
-.hero-row{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,6vw,96px);align-items:end;margin-top:clamp(36px,5vw,60px)}
-.hero-copy{display:flex;flex-direction:column;gap:32px}
-.hero-copy p{font-size:clamp(18px,1.6vw,21px);line-height:1.62;color:var(--ink-2);max-width:40ch}
-.notes{border:2px solid var(--ink);border-radius:10px;background:var(--paper-2);padding:22px 24px 10px}
-.notes h4{margin-bottom:12px}
-.notes dl{margin:0}
-.notes div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:14px}
-.notes div:first-child{border-top:0}
-.notes dt{color:var(--muted)}
-.notes dd{margin:0;text-align:right}
-.notes .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--rust);margin-right:8px;vertical-align:1px}
-
-.purpose{border-bottom:1px solid var(--line)}
-.purpose .wrap{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;padding-block:44px}
-.purpose p{font-family:var(--serif);font-size:clamp(20px,2vw,25px);line-height:1.45;font-weight:500;max-width:52ch}
-
-.home-sec .wrap{padding-block:clamp(56px,7vw,88px)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:34px}
-.sec-head h2{font-size:clamp(34px,4.4vw,50px);font-weight:600}
-.sec-head .aside{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none}
-.sec-head a.aside{color:var(--rust)}
-.index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.index a{display:flex;flex-direction:column;gap:8px;padding:28px 26px 30px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
-.index a:hover{border-color:var(--ink);transform:translateY(-2px)}
-.index .n{font-family:var(--mono);font-size:13px;color:var(--rust);margin-bottom:10px}
-.index b{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.15}
-.index span.d{color:var(--muted);font-size:15.5px}
-.index a.darkcard{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.index a.darkcard span.d{color:#BDB3A5}
-.index a.darkcard .n{color:#E08A5E}
-.evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.exhibit{display:flex;flex-direction:column;border:2px solid var(--ink);border-radius:10px;overflow:hidden;background:var(--card);text-decoration:none;color:var(--ink)}
-.exhibit:hover h3{color:var(--rust)}
-.ill{display:block;background-color:#EFE8DA;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:20px 20px;border-bottom:2px solid var(--ink);aspect-ratio:5/3;max-width:100%}
-.ill svg{display:block;width:100%;height:100%}
-.ex-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
-.ex-meta{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
-.exhibit h3{font-size:27px;transition:color .15s}
-.exhibit p{color:var(--muted);font-size:15.5px}
-.ex-more{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
-
-/* ---------- inner pages ---------- */
-.page-head{border-bottom:2px solid var(--ink);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:34px 34px}
-.page-head .wrap{padding-block:clamp(44px,6vw,76px) clamp(36px,5vw,56px)}
-.crumbs{display:flex;gap:10px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
-.crumbs a{color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--card)}
-.crumbs a:hover{border-color:var(--ink)}
-.page-title{font-size:clamp(44px,7vw,92px);font-weight:600;letter-spacing:-.035em;line-height:.95;font-variation-settings:"opsz" 144;max-width:16ch}
-.lede{font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:58ch;margin-top:22px}
-.page-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(28px,5vw,72px);padding-block:48px 0}
-.rail{position:sticky;top:100px;align-self:start;display:flex;flex-direction:column;gap:2px}
-.rail h4{margin-bottom:10px}
-.rail a{font-size:14px;color:var(--muted);text-decoration:none;padding:6px 0 6px 14px;border-left:1.5px solid var(--line)}
-.rail a:hover{color:var(--ink);border-left-color:var(--ink)}
-.page-main{min-width:0;max-width:860px}
-.page-main > section.block:first-child,.page-main > .note:first-child + section.block{margin-top:0}
-section.block{margin-top:64px;display:flex;flex-direction:column;gap:20px;scroll-margin-top:100px}
-section.block > h2{font-size:clamp(28px,3vw,36px);padding-bottom:14px;border-bottom:1.5px solid var(--ink)}
-.prose{display:flex;flex-direction:column;gap:16px;max-width:66ch}
-.page-main h3{font-size:23px}
-
-.card{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--card);white-space:nowrap}
-.chip.comp{background:var(--rust-soft);border-color:transparent;color:var(--rust)}
-ul.clean{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
-ul.clean li::marker{color:var(--rust)}
-.kv{display:grid;grid-template-columns:160px minmax(0,1fr);gap:10px 20px;margin:0}
-.kv dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:4px}
-.kv dd{margin:0}
-
-.entry{display:grid;grid-template-columns:160px minmax(0,1fr);gap:24px;padding:26px 0;border-top:1px solid var(--line)}
-.entry:first-of-type{border-top:0;padding-top:4px}
-.when{font-family:var(--mono);font-size:12.5px;color:var(--muted);line-height:1.5;font-variant-numeric:tabular-nums}
-.when .type{display:inline-block;margin-top:10px}
-.entry h3{margin-bottom:4px}
-.org{color:var(--muted);font-size:15px;margin-bottom:14px}
-.entry h4{margin-bottom:6px}
-.accomp{margin-top:14px;padding:12px 16px;border-radius:8px;background:var(--paper-2);font-size:15px}
-.accomp b{color:var(--rust)}
-
-.artifact{background:var(--card);border:2px solid var(--ink);border-radius:10px;overflow:hidden;scroll-margin-top:100px}
-.art-head{padding:24px 26px 20px;display:flex;flex-direction:column;gap:12px;border-bottom:1.5px solid var(--line)}
-.art-meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);display:flex;flex-wrap:wrap;gap:4px 18px}
-.art-head h3{font-size:clamp(23px,2.4vw,28px)}
-.art-body{padding:22px 26px 26px;display:flex;flex-direction:column;gap:20px}
-.artifact > .ill{border-bottom:1.5px solid var(--line);aspect-ratio:5/2}
-.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-family:var(--mono);font-size:12px}
-.flow span{padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
-.flow i{font-style:normal;color:var(--rust)}
-.flow .eq{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.rrr{display:grid;grid-template-columns:104px minmax(0,1fr);border:1.5px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
-.rrr > div{padding:15px 18px;border-top:1px solid var(--line)}
-.rrr > div:nth-child(-n+2){border-top:0}
-.rrr .rk{background:var(--paper-2);font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);font-weight:500}
-.rrr .rk small{display:block;text-transform:none;letter-spacing:0;color:var(--muted);font-weight:400;font-size:11px;margin-top:3px;line-height:1.35}
-.why{font-size:15px;color:var(--muted);border-left:2px solid var(--rust);padding-left:16px}
-.why b{color:var(--ink)}
-.evidence{display:flex;flex-wrap:wrap;gap:8px}
-.evidence > span{font-size:13px;padding:6px 12px;border-radius:6px;border:1px dashed var(--muted);color:var(--muted)}
-
-.goal-banner{background:var(--ink);color:var(--paper);border-radius:10px;padding:30px 30px 32px;display:flex;flex-direction:column;gap:10px}
-.goal-banner .eyebrow{color:#E08A5E;margin:0}
-.goal-banner h2{font-size:clamp(32px,4vw,44px)}
-.goal-banner p{max-width:60ch;color:#D9D0C3}
-.pf-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.pf-index a{display:flex;flex-direction:column;gap:6px;padding:16px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);text-decoration:none;color:var(--ink)}
-.pf-index a:hover{border-color:var(--ink)}
-.pf-index .n{font-family:var(--mono);font-size:11.5px;color:var(--rust)}
-.pf-index b{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.2}
-.intro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;font-size:15.5px}
-.intro h4{margin-bottom:6px}
-
-.tablewrap{overflow-x:auto;border:1.5px solid var(--line);border-radius:10px;background:var(--card)}
-table{border-collapse:collapse;width:100%;font-size:15px}
-th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:0}
-th{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--paper-2)}
-.smart td:first-child{font-family:var(--serif);font-weight:700;color:var(--rust);font-size:24px;width:44px}
-.matrix th.c,.matrix td.c{text-align:center;padding:10px 6px;min-width:46px}
-.matrix td.c{color:var(--rust);font-size:15px}
-.matrix td a{font-weight:600;color:var(--ink);text-decoration-color:var(--line)}
-.matrix td a:hover{color:var(--rust)}
-
-.resume{background:#FFFDF8;border:1.5px solid var(--line);border-radius:4px;padding:clamp(22px,4vw,44px);display:flex;flex-direction:column;gap:18px;font-size:14.5px;line-height:1.55;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(27,24,20,.35)}
-.resume header{text-align:center;display:flex;flex-direction:column;gap:4px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
-.resume header h3{font-size:28px}
-.resume header p{font-size:13px;color:var(--muted)}
-.resume h4{color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:5px;margin-bottom:8px}
-.r-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.r-row b{font-weight:700}
-.r-row span{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
-.resume ul{margin:6px 0 10px;padding-left:1.2em}
-.resume p.sk{margin-bottom:3px}
-
-.fill{background:var(--hl);color:var(--hl-ink);border-bottom:1.5px dashed var(--hl-ink);padding:0 4px;border-radius:2px}
-.note{background:#FBF0CF;border:1.5px dashed #C9A24A;color:var(--ink);border-radius:8px;padding:12px 16px;font-size:14px}
-.note b{color:var(--hl-ink);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-right:8px}
-body.clean .fill{background:none;border:0;color:inherit;padding:0}
-body.clean .note{display:none}
-
-.copy{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
-.copy code{font-family:var(--mono);font-size:14px;padding:6px 12px;background:var(--paper-2);border-radius:6px;user-select:all}
-
-/* contact */
-.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.contact-card{border:2px solid var(--ink);border-radius:10px;background:var(--card);padding:26px;display:flex;flex-direction:column;gap:12px}
-.contact-card.dk{background:var(--ink);color:var(--paper)}
-.contact-card.dk h4{color:#BDB3A5}
-.contact-card.dk a{color:#F0B08E}
-.contact-card h3{font-size:26px}
-
-/* footer */
-.foot{margin-top:96px;border-top:2px solid var(--ink);background:var(--paper-2)}
-.foot .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding-block:30px 36px;font-size:14px;color:var(--muted)}
-.foot b{font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:700;margin-right:6px}
-.foot .fl{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
-.foot a{color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
-.foot a:hover{color:var(--rust)}
-
-/* ---------- responsive ---------- */
-@media (max-width: 1080px){
-  .mainnav{gap:16px}
-  .mainnav a{font-size:11px;letter-spacing:.1em}
-  .mainnav a span{display:none}
-}
-@media (max-width: 900px){
-  .menuBtn{display:inline-flex}
-  .mainnav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px var(--gut) 16px}
-  .mainnav.open{display:flex}
-  .mainnav a{font-size:13px;padding:12px 0;border-bottom:1px solid var(--line)}
-  .mainnav a span{display:inline}
-  .hero-row,.purpose .wrap{grid-template-columns:1fr}
-  .index,.evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .page-grid{grid-template-columns:1fr;padding-top:28px}
-  .rail{position:static;flex-direction:row;flex-wrap:wrap;gap:8px}
-  .rail h4{width:100%;margin-bottom:2px}
-  .rail a{border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;background:var(--card)}
-  .pf-index{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (max-width: 640px){
-  .top .wrap{height:64px}
-  .brand small{display:none}
-  .index,.evidence-grid,.grid2,.intro,.contact-grid{grid-template-columns:1fr}
-  .entry,.kv{grid-template-columns:1fr;gap:6px}
-  .rrr{grid-template-columns:1fr}
-  .rrr > div:nth-child(2){border-top:0}
-  .rrr .rk{border-top:1px solid var(--line)}
-  .rrr .rk:first-child{border-top:0}
-  .art-head,.art-body{padding-inline:18px}
-  .artifact > .ill{aspect-ratio:5/3}
-  .notes div{font-size:13px}
-}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.index a{transition:none}}
+:root{--bg:#f8fafc;--surface:#fff;--surface2:#eef3f8;--navy:#142b4a;--navy2:#203f63;--blue:#5c83ad;--blue2:#dce8f4;--ink:#243246;--muted:#65758a;--line:#dce4ed;--shadow:0 14px 40px rgba(25,48,76,.07);--radius:20px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "DM Sans",sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--navy2);text-underline-offset:4px}a:hover{color:var(--blue)}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(248,250,252,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em}.monogram{width:42px;height:42px;border-radius:13px;background:var(--navy);color:white;display:grid;place-items:center;font-size:14px;letter-spacing:0}.brand span:last-child{font-size:17px}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--navy)}.navlinks .contact-link{background:var(--navy);color:white;padding:10px 17px;border-radius:999px}.menu{display:none;border:1px solid var(--line);background:white;color:var(--navy);border-radius:10px;padding:9px 12px;font-weight:700}
+.hero{padding:92px 0 76px;background:radial-gradient(ellipse at 85% 10%,#e8f0f8 0,transparent 34%),linear-gradient(180deg,#f8fafc 0%,#f4f7fb 100%);border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:64px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}.eyebrow:before{content:"";width:25px;height:2px;background:var(--blue)}h1,h2,h3{font-family:Manrope,sans-serif;color:var(--navy);line-height:1.16;letter-spacing:-.04em;margin:0}h1{font-size:clamp(48px,7vw,82px);font-weight:800;margin:22px 0 20px;max-width:760px}h1 em{font-style:normal;color:var(--blue)}.hero p{font-size:19px;max-width:650px;color:#52647a;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--navy);transition:.2s}.btn.primary{background:var(--navy);color:white}.btn.primary:hover{background:var(--navy2);transform:translateY(-2px)}.btn.secondary{color:var(--navy);background:transparent}.btn.secondary:hover{background:var(--blue2)}.profile-card{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.profile-top{display:flex;align-items:center;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}.avatar{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;background:var(--blue2);color:var(--navy);font:800 18px Manrope}.profile-top strong{display:block;color:var(--navy);font:800 17px Manrope}.profile-top small{color:var(--muted);font-size:13px}.status{display:flex;align-items:center;gap:8px;color:#3f6f62;font-size:12px;font-weight:700;margin-top:22px}.dot{width:8px;height:8px;background:#5e9a83;border-radius:50%}.quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.fact{padding:14px;background:var(--surface2);border-radius:13px}.fact small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.fact b{display:block;color:var(--navy);font:700 14px Manrope;margin-top:5px}
+section{padding:82px 0}.section-head{max-width:700px;margin-bottom:34px}.section-head h2{font-size:clamp(32px,4vw,45px);margin:13px 0}.section-head p{color:var(--muted);margin:0}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px}.prose p{margin:0 0 15px;color:#526176}.info-card,.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 5px 22px rgba(25,48,76,.035)}.info-card h3,.card h3{font-size:19px;margin-bottom:16px}.detail{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-top:1px solid var(--line);font-size:14px}.detail:first-of-type{border-top:0}.detail span:first-child{color:var(--muted)}.detail strong{text-align:right;color:var(--navy)}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}.skill{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:19px}.skill h3{font-size:15px;margin-bottom:10px}.skill p{font-size:13px;color:var(--muted);margin:0}
+.alt{background:#f0f4f8;border-block:1px solid var(--line)}.timeline{display:grid;grid-template-columns:210px 1fr;gap:28px;padding:28px 0;border-top:1px solid #d7e0e9}.timeline:first-of-type{border-top:0}.date{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:800}.timeline h3{font-size:22px;margin-bottom:5px}.org{color:var(--muted);font-weight:600;margin-bottom:13px}.timeline p{margin:0 0 12px;color:#526176}.list{margin:0;padding-left:20px;color:#526176}.list li{margin:6px 0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tag{font-size:11px;font-weight:700;color:#456789;background:var(--blue2);padding:5px 10px;border-radius:999px}
+.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.goal-card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}.number{font:800 13px Manrope;color:var(--blue);letter-spacing:.1em}.goal-card h3{font-size:20px;margin:12px 0}.goal-card p{font-size:14px;color:var(--muted);margin:0}.focus{margin-top:22px;padding:25px 28px;border-radius:18px;background:var(--navy);color:#e8eff7}.focus h3{color:white;font-size:21px;margin-bottom:9px}.focus p{margin:0;color:#d1deeb}
+.reflection{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.reflection .card{box-shadow:none}.reflection h3{font-size:20px;margin-bottom:10px}.reflection p{font-size:14px;color:var(--muted);margin:0}.reflection .label{color:var(--blue);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:10px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 24px rgba(25,48,76,.04)}.project-top{height:9px;background:linear-gradient(90deg,var(--navy),#8eaccb)}.project-content{padding:25px}.project-meta{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:800}.project h3{font-size:22px;margin:10px 0}.project p{color:var(--muted);font-size:14px;margin:0 0 14px}.project h4{font:800 11px Manrope;color:var(--navy);text-transform:uppercase;letter-spacing:.1em;margin:18px 0 7px}.project ul{margin:0;padding-left:18px;color:#526176;font-size:13px}.project li{margin:5px 0}.project .tags{margin-top:18px}
+.contact{background:var(--navy);color:#e5edf6}.contact .section-head h2{color:white}.contact .section-head p{color:#c0cede}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-box{border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:24px;background:rgba(255,255,255,.06)}.contact-box small{display:block;color:#a9bfd7;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:11px}.contact-box h3{color:white;font-size:20px;margin:8px 0}.contact-box a{color:#d6e7f8}.contact-box p{margin:0;color:#d6e0ec;font-size:14px}
+footer{padding:25px 0;background:#10233d;color:#b6c5d6;font-size:13px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.foot strong{color:white;font-family:Manrope}
+@media(max-width:900px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:30px}.profile-card{max-width:560px}.skills{grid-template-columns:repeat(2,1fr)}.goal-grid{grid-template-columns:1fr 1fr}.navlinks{gap:14px}.navlinks a{font-size:12px}}
+@media(max-width:680px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:66px}.menu{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:12px 20px 20px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 4px}.navlinks .contact-link{text-align:center;margin-top:8px}.hero{padding:64px 0 55px}h1{font-size:48px}.hero p{font-size:17px}section{padding:62px 0}.skills,.goal-grid,.reflection,.project-grid,.contact-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr;gap:8px}.quickfacts{gap:10px}.profile-card{padding:21px}.section-head{margin-bottom:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
-
-
-<!-- ============ illustration sprite ============ -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="ill-irrigation" viewBox="0 0 400 240">
-      <g style="fill:none;stroke:#1B1814;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round">
-        <path d="M330 85 V40 H150 V55" style="stroke-width:4;stroke:#6A6258"/>
-        <path d="M146 55 h8" style="stroke-width:3"/>
-        <path d="M150 64 q-4 6 0 9 q4 -3 0 -9 z M142 76 q-4 6 0 9 q4 -3 0 -9 z M157 80 q-4 6 0 9 q4 -3 0 -9 z" style="fill:#7FA3B5;stroke-width:1"/>
-        <path d="M58 148 H142 L132 216 H68 Z" style="fill:#E3D6BF"/>
-        <path d="M62 160 H138"/>
-        <path d="M100 148 C100 128 98 112 102 92"/>
-        <path d="M101 120 C88 116 78 106 76 96 C90 98 99 108 101 120 Z" style="fill:#8BA07A"/>
-        <path d="M101 108 C114 104 122 94 124 84 C111 86 102 96 101 108 Z" style="fill:#8BA07A"/>
-        <path d="M102 94 C94 88 92 80 94 72 C102 78 104 86 102 94 Z" style="fill:#8BA07A"/>
-        <rect x="116" y="118" width="9" height="62" rx="2" style="fill:#A0441C;stroke:#1B1814"/>
-        <path d="M120 118 C120 96 150 104 180 104" style="stroke:#A0441C"/>
-        <rect x="180" y="80" width="80" height="52" rx="4" style="fill:#2F5D50"/>
-        <rect x="204" y="94" width="30" height="22" rx="2" style="fill:#1B1814"/>
-        <path d="M186 80 v-6 M194 80 v-6 M202 80 v-6 M210 80 v-6 M218 80 v-6 M226 80 v-6 M234 80 v-6 M242 80 v-6 M250 80 v-6"/>
-        <circle cx="250" cy="124" r="2.5" style="fill:#E08A5E;stroke:none"/>
-        <path d="M260 106 H300" style="stroke-dasharray:4 4"/>
-        <rect x="300" y="85" width="60" height="40" rx="6" style="fill:#E3D6BF"/>
-        <circle cx="330" cy="105" r="10"/>
-        <path d="M330 99 v12 M324 105 h12"/>
-        <path d="M200 226 H386 M200 226 V160" style="stroke:#6A6258"/>
-        <path d="M200 196 H386" style="stroke:#A0441C;stroke-dasharray:5 4"/>
-        <polyline points="202,172 222,182 244,194 258,199 266,172 290,182 312,194 326,200 334,171 358,183 384,196" style="stroke:#1B1814;stroke-width:2"/>
-      </g>
-      <g style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#675F55;letter-spacing:.08em">
-        <text x="200" y="152">SOIL MOISTURE</text>
-        <text x="332" y="210" style="fill:#A0441C">threshold</text>
-        <text x="186" y="66">ARDUINO</text>
-        <text x="312" y="140">PUMP</text>
-        <text x="60" y="232">SENSOR PROBE</text>
-      </g>
-    </symbol>
-
-    <symbol id="ill-speed" viewBox="0 0 400 240">
-      <g style="fill:none;stroke:#1B1814;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round">
-        <rect x="16" y="68" width="368" height="64" style="fill:#DCD2C0;stroke:none"/>
-        <path d="M16 68 H384 M16 132 H384"/>
-        <path d="M16 100 H384" style="stroke:#F4EFE4;stroke-width:2.5;stroke-dasharray:14 10"/>
-        <path d="M110 44 V140 M290 44 V140"/>
-        <rect x="100" y="30" width="20" height="16" rx="2" style="fill:#1B1814"/>
-        <rect x="280" y="30" width="20" height="16" rx="2" style="fill:#1B1814"/>
-        <path d="M110 70 V130 M290 70 V130" style="stroke:#A0441C;stroke-dasharray:3 4;stroke-width:2"/>
-        <path d="M166 106 V92 C166 88 170 86 174 86 L186 86 L198 76 H222 L234 86 H244 C248 86 250 90 250 94 V106 Z" style="fill:#F9F5ED"/>
-        <path d="M202 80 H220 L228 86 H196 Z" style="fill:#A9C1CC"/>
-        <circle cx="182" cy="108" r="7" style="fill:#1B1814"/>
-        <circle cx="234" cy="108" r="7" style="fill:#1B1814"/>
-        <path d="M150 96 H128 M154 90 H136 M150 102 H138" style="stroke:#675F55"/>
-        <path d="M112 152 H288" /><path d="M112 148 v8 M288 148 v8"/>
-        <path d="M40 196 H108 V184 H124 V196 H386" style="stroke-width:2"/>
-        <path d="M40 222 H288 V210 H304 V222 H386" style="stroke-width:2"/>
-        <path d="M110 232 H290" style="stroke:#A0441C"/><path d="M110 228 v8 M290 228 v8" style="stroke:#A0441C"/>
-        <circle cx="40" cy="30" r="5" style="fill:#8BA07A"/>
-        <circle cx="56" cy="30" r="5" style="fill:#E3D6BF"/>
-        <circle cx="72" cy="30" r="5" style="fill:#A0441C"/>
-      </g>
-      <g style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#675F55;letter-spacing:.08em">
-        <text x="106" y="41" style="fill:#F4EFE4">A</text>
-        <text x="286" y="41" style="fill:#F4EFE4">B</text>
-        <text x="196" y="166">d</text>
-        <text x="20" y="199">A</text>
-        <text x="20" y="225">B</text>
-        <text x="194" y="228" style="fill:#A0441C">Δt</text>
-        <text x="312" y="36" style="font-size:12px;fill:#1B1814">v = d / Δt</text>
-        <text x="84" y="33">LED</text>
-      </g>
-    </symbol>
-
-    <symbol id="ill-bank" viewBox="0 0 400 240">
-      <g style="fill:none;stroke:#1B1814;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round">
-        <rect x="18" y="62" width="74" height="42" rx="4" style="fill:#F9F5ED"/>
-        <rect x="114" y="62" width="74" height="42" rx="4" style="fill:#F9F5ED"/>
-        <rect x="210" y="62" width="74" height="42" rx="4" style="fill:#1B1814"/>
-        <rect x="306" y="62" width="76" height="42" rx="4" style="fill:#F9F5ED"/>
-        <path d="M92 83 H110 M188 83 H206 M284 83 H302"/>
-        <path d="M106 79 l4 4 l-4 4 M202 79 l4 4 l-4 4 M298 79 l4 4 l-4 4"/>
-        <path d="M344 104 V144"/><path d="M340 140 l4 4 l4 -4"/>
-        <ellipse cx="344" cy="154" rx="30" ry="8" style="fill:#E3D6BF"/>
-        <path d="M314 154 V206 C314 211 327 215 344 215 C361 215 374 211 374 206 V154" style="fill:#E3D6BF"/>
-        <path d="M314 172 C314 177 327 181 344 181 C361 181 374 177 374 172 M314 190 C314 195 327 199 344 199 C361 199 374 195 374 190"/>
-        <rect x="18" y="140" width="206" height="76" rx="4" style="fill:#1B1814"/>
-        <rect x="238" y="170" width="62" height="24" rx="12" style="fill:#8BA07A;stroke:none"/>
-      </g>
-      <g style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#1B1814;letter-spacing:.04em">
-        <text x="18" y="40" style="fill:#675F55;letter-spacing:.14em">REST · SPRING BOOT · MYSQL</text>
-        <text x="34" y="87">CLIENT</text>
-        <text x="122" y="87">CONTROLLER</text>
-        <text x="224" y="87" style="fill:#F4EFE4">SERVICE</text>
-        <text x="312" y="87">REPOSITORY</text>
-        <text x="30" y="160" style="fill:#E08A5E">POST /accounts/{id}/withdraw</text>
-        <text x="30" y="178" style="fill:#F4EFE4">{ "amount": 150.00 }</text>
-        <text x="30" y="198" style="fill:#8BA07A">→ 200 OK</text>
-        <text x="30" y="210" style="fill:#BDB3A5">→ 400 if amount > balance</text>
-        <text x="248" y="185" style="fill:#1B1814">JUnit</text>
-        <text x="330" y="231" style="fill:#675F55">MySQL</text>
-      </g>
-    </symbol>
-
-    <symbol id="ill-library" viewBox="0 0 400 240">
-      <g style="fill:none;stroke:#1B1814;stroke-width:1.6;stroke-linejoin:round">
-        <path d="M18 124 H206" style="stroke-width:3"/>
-        <rect x="24" y="64" width="16" height="60" style="fill:#A0441C"/>
-        <rect x="40" y="74" width="20" height="50" style="fill:#E3D6BF"/>
-        <rect x="60" y="58" width="14" height="66" style="fill:#2F5D50"/>
-        <rect x="74" y="70" width="22" height="54" style="fill:#F9F5ED"/>
-        <rect x="96" y="80" width="16" height="44" style="fill:#8BA07A"/>
-        <path d="M114 124 L134 70 L148 75 L128 124 Z" style="fill:#E3D6BF"/>
-        <rect x="150" y="66" width="18" height="58" style="fill:#1B1814"/>
-        <rect x="168" y="76" width="16" height="48" style="fill:#A0441C"/>
-        <rect x="184" y="62" width="18" height="62" style="fill:#F9F5ED"/>
-        <rect x="18" y="146" width="188" height="74" rx="5" style="fill:#1B1814"/>
-        <rect x="236" y="40" width="148" height="180" rx="4" style="fill:#F9F5ED"/>
-        <path d="M236 64 H384 M236 96 H384 M236 128 H384 M236 160 H384 M236 192 H384 M300 64 V220" style="stroke:#D6CCB9"/>
-        <path d="M206 100 C220 100 222 110 234 110" style="stroke:#A0441C"/><path d="M230 106 l4 4 l-4 4" style="stroke:#A0441C"/>
-      </g>
-      <g style="font-family:'JetBrains Mono',monospace;font-size:9px;fill:#1B1814;letter-spacing:.04em">
-        <text x="244" y="56" style="fill:#A0441C">Map&lt;String, Book&gt;</text>
-        <text x="244" y="84">B-0142</text><text x="308" y="84">Dune</text>
-        <text x="244" y="116">B-0217</text><text x="308" y="116">Emma</text>
-        <text x="244" y="148">B-0388</text><text x="308" y="148">Ulysses</text>
-        <text x="244" y="180">B-0451</text><text x="308" y="180" style="fill:#A0441C">on loan</text>
-        <text x="30" y="166" style="fill:#E08A5E">&gt; search dune</text>
-        <text x="30" y="184" style="fill:#F4EFE4">1 result · B-0142</text>
-        <text x="30" y="202" style="fill:#E08A5E">&gt; loan B-0142</text>
-        <text x="30" y="214" style="fill:#8BA07A">saved to library.txt</text>
-      </g>
-    </symbol>
-  </defs>
-</svg>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#home" data-go="home"><span class="mark">YK</span><span><b>Yashika Kapoor</b><small>Engineering ePortfolio</small></span></a>
-    <nav class="mainnav" id="mainnav" aria-label="Main">
-      <a href="#about" data-go="about" data-nav="about"><span>01</span>About</a>
-      <a href="#career" data-go="career" data-nav="career"><span>02</span>Career</a>
-      <a href="#goals" data-go="goals" data-nav="goals"><span>03</span>Goals</a>
-      <a href="#reflections" data-go="reflections" data-nav="reflections"><span>04</span>Reflections</a>
-      <a href="#projects" data-go="projects" data-nav="projects"><span>05</span>Projects</a>
-      <a href="#contact" data-go="contact" data-nav="contact"><span>06</span>Contact</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Yashika Kapoor home"><span class="monogram">YK</span><span>Yashika Kapoor</span></a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#experience">Career</a><a href="#goals">Goals</a><a href="#reflections">Reflections</a><a href="#projects">Projects</a><a class="contact-link" href="#contact">Contact</a>
     </nav>
-    <button class="btn menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainnav">Menu</button>
   </div>
 </header>
-
-<main id="main">
-
-<!-- ======================= HOME ======================= -->
-<div class="page" data-page="home">
-  <section class="hero">
-    <div class="wrap">
-      <h1>Building ideas<br>into reliable systems.</h1>
-      <div class="hero-row">
-        <div class="hero-copy">
-          <p>I'm Yashika Kapoor, a Computer Engineering student at York University specializing in Software Engineering. I build dependable software and embedded systems, then document what the work taught me.</p>
-          <div class="btn-row">
-            <a class="pill dark" href="#projects" data-go="projects">View my projects <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
-            <a class="pill ghost" href="#career" data-go="career:resume"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h6l4 4V17a.5.5 0 0 1-.5.5h-9.5a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5z"/><path d="M12 2.5V7h4M7.5 11h5M7.5 14h5"/></svg>View résumé</a>
-          </div>
-        </div>
-        <div class="notes">
-          <h4>My Skills</h4>
-          <dl>
-            <div><dt>Languages</dt><dd>Java · Python · C/C++ · SQL</dd></div>
-            <div><dt>Backend</dt><dd>Spring Boot · REST APIs · MySQL</dd></div>
-            <div><dt>AI</dt><dd>RAG · LangChain · Embeddings</dd></div>
-            <div><dt>Tools</dt><dd>Git · Docker · Postman · MATLAB</dd></div>
-            <div><dt>Other</dt><dd>React · Embedded Systems · Agile</dd></div>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="purpose">
-    <div class="wrap">
-      <h4>Purpose of this portfolio</h4>
-      <p>This ePortfolio records my growth as I prepare for my first co-op term. Each page pairs evidence of my work with a reflection on what it taught me, and each piece points toward one goal: a career in software engineering focused on applied AI and embedded systems.</p>
-    </div>
-  </section>
-
-  <section class="home-sec">
-    <div class="wrap">
-      <div class="sec-head"><h2>Portfolio index</h2><span class="aside">Six modules</span></div>
-      <nav class="index" aria-label="Portfolio index">
-        <a href="#about" data-go="about"><span class="n">01</span><b>About Me</b><span class="d">Professional biography, program of study, and career goals.</span></a>
-        <a href="#career" data-go="career"><span class="n">02</span><b>Career</b><span class="d">Education, experience, courses, and my current résumé.</span></a>
-        <a href="#goals" data-go="goals"><span class="n">03</span><b>Goals &amp; Portfolios</b><span class="d">Discover Myself: dreams, skills, values, and credentials.</span></a>
-        <a href="#reflections" data-go="reflections"><span class="n">04</span><b>Reflections</b><span class="d">Retell, relate, reflect, plus my competency map.</span></a>
-        <a href="#projects" data-go="projects"><span class="n">05</span><b>Course Projects</b><span class="d">Four engineering projects, each tagged and reflected on.</span></a>
-        <a class="darkcard" href="#contact" data-go="contact"><span class="n">06</span><b>Contact</b><span class="d">Email, LinkedIn, GitHub, and résumé.</span></a>
-      </nav>
-    </div>
-  </section>
-</div>
-
-<!-- ======================= A: ABOUT ======================= -->
-<div class="page" data-page="about" hidden>
-  <header class="page-head"><div class="wrap">
-  <div class="crumbs"><a href="#home" data-go="home">← Home</a><span>01 / About</span></div>
-  <span class="eyebrow">01 — About</span>
-  <h1 class="page-title">About Me</h1>
-  <p class="lede">Who I am, what I study, and where I am heading.</p>
-</div></header>
-<div class="wrap"><div class="page-grid">
-<nav class="rail" aria-label="On this page"><h4>On this page</h4></nav>
-<div class="page-main">
-
-  <section class="block">
-    <h2>Professional biography</h2>
-    <div class="prose">
-      <p>I am a Computer Engineering student at York University's Lassonde School of Engineering. I am currently interning as a Quality Engineering Co-op at Aviva, where I am gaining hands-on experience in software quality, testing, and professional engineering practices. I am especially interested in building reliable software systems, and my academic projects range from embedded systems to backend applications built with Java and Spring Boot.</p>
-      <p>Alongside my coursework and co-op experience, I am continuing to strengthen my skills in Java, Python, backend development, software testing, and generative AI technologies such as retrieval-augmented generation (RAG), LangChain, and vector databases. My goal is to keep developing as an engineer by applying what I learn to practical projects and real-world software systems.</p>
-    </div>
-  </section>
-
-  <section class="block">
-    <h2>Program of study</h2>
-    <dl class="kv">
-      <dt>Degree</dt><dd>Bachelor of Engineering (BEng), Computer Engineering</dd>
-      <dt>Institution</dt><dd>York University, Lassonde School of Engineering</dd>
-      <dt>Started</dt><dd>September 2024</dd>
-      <dt>Expected grad.</dt><dd>April 2028</dd>
-    </dl>
-  </section>
-
-  <section class="block">
-    <h2>Career goals</h2>
-    <div class="grid2">
-      <div class="card"><h4>Near term</h4><p>Complete a co-op placement in software development or applied AI, where I can contribute to a production codebase and learn how professional teams test, review, and ship software.</p></div>
-      <div class="card"><h4>Long term</h4><p>Work as a software engineer on AI-enabled systems that interact with the physical world, such as smart infrastructure or resource monitoring, where good engineering reduces waste and improves daily life.</p></div>
-    </div>
-  </section>
-
-  <section class="block">
-    <h2>Find me online</h2>
-    <dl class="kv">
-      <dt>Email</dt><dd><span class="copy"><code id="emailAbout">yashikakapoor2006@gmail.com</code></span></dd>
-      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">linkedin.com/in/yashika-kapoor-958767329</a></dd>
-      <dt>GitHub</dt><dd><a href="https://github.com/yashikakapoor02" target="_blank" rel="noopener">github.com/yashikakapoor02</a></dd>
-    </dl>
-  </section>
-</div></div></div>
-</div>
-
-<!-- ======================= B: CAREER ======================= -->
-<div class="page" data-page="career" hidden>
-  <header class="page-head"><div class="wrap">
-  <div class="crumbs"><a href="#home" data-go="home">← Home</a><span>02 / Career</span></div>
-  <span class="eyebrow">02 — Career</span>
-  <h1 class="page-title">Career: Education, Experience, and Resume</h1>
-</div></header>
-<div class="wrap"><div class="page-grid">
-<nav class="rail" aria-label="On this page"><h4>On this page</h4></nav>
-<div class="page-main">
-
-  <section class="block" id="education">
-    <h2>Education</h2>
+<main id="home">
+<section class="hero">
+  <div class="wrap hero-grid">
     <div>
-      <div class="entry">
-        <div class="when">Sept 2024 – present<br><span class="chip type">Degree</span></div>
-        <div>
-          <h3>Bachelor of Engineering, Computer Engineering</h3>
-          <p class="org">York University, Lassonde School of Engineering</p>
-          <p>Expected graduation: April 2028. Coursework in object-oriented programming, data structures, and embedded systems, with hands-on work in Java, C, MATLAB, and Arduino.</p>
-        </div>
-      </div>
+      <span class="eyebrow">Computer Engineering · York University</span>
+      <h1>Building technology is one thing. <em>Making it reliable</em> is another.</h1>
+      <p>I'm Yashika Kapoor, a Computer Engineering student at York University and a Quality Engineering Intern at Aviva. I'm interested in software quality, backend development and building systems that work as expected.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my projects</a><a class="btn secondary" href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
     </div>
-  </section>
+    <aside class="profile-card">
+      <div class="profile-top"><div class="avatar">YK</div><div><strong>Yashika Kapoor</strong><small>Engineering student · Intern</small></div></div>
+      <div class="status"><span class="dot"></span> Quality Engineering Intern at Aviva</div>
+      <div class="quickfacts"><div class="fact"><small>University</small><b>York University</b></div><div class="fact"><small>Program</small><b>Computer Engineering</b></div><div class="fact"><small>Expected graduation</small><b>April 2028</b></div><div class="fact"><small>Based in</small><b>Ontario, Canada</b></div></div>
+    </aside>
+  </div>
+</section>
 
-  <section class="block" id="experience">
-    <h2>Experience</h2>
-    <div>
-      <div class="entry">
-        <div class="when">Fall 2026 – Winter 2027<br><span class="chip type">Co-op</span></div>
-        <div>
-          <h3>Quality Engineering Intern</h3>
-          <p class="org">Aviva</p>
-          <p>Quality Engineering co-op placement spanning the Fall 2026 and Winter 2027 terms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="resume">
-    <h2>Resume</h2>
-    <article class="resume" aria-label="Resume">
-      <header>
-        <h3>Yashika Kapoor</h3>
-        <p>Ontario, Canada · yashikakapoor2006@gmail.com · <a href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">linkedin.com/in/yashika-kapoor-958767329</a></p>
-      </header>
-      <div>
-        <h4>Education</h4>
-        <div class="r-row"><b>York University</b><span>Sept 2024 – Present</span></div>
-        <div class="r-row"><i>Bachelor of Engineering, Computer Engineering</i><i>Expected Graduation: April 2028</i></div>
-      </div>
-      <div>
-        <h4>Skills</h4>
-        <p class="sk"><b>AI:</b> Generative AI, LLMs, Prompt Engineering, Retrieval-Augmented Generation (RAG), LangChain, Vector Databases, Embeddings and Knowledge Base Management, Data Pipelines</p>
-        <p class="sk"><b>Languages and technologies:</b> Java, Python, C/C++, MATLAB, MySQL, React, RESTful APIs</p>
-        <p class="sk"><b>Frameworks and tools:</b> Azure Cloud Services, Bootstrap, Maven, Git, GitHub, CI/CD pipelines</p>
-        <p class="sk"><b>Programming concepts:</b> Object-Oriented Programming, Agile, Data Structures</p>
-        <p class="sk"><b>Soft skills:</b> Teamwork, Communication, Problem Solving, Critical Thinking, Pair Programming</p>
-      </div>
-      <div>
-        <h4>Projects</h4>
-        <div class="r-row"><b>Bank Account Management System</b><span>Java, Spring Boot, MySQL, REST APIs, JUnit</span></div>
-        <ul>
-          <li>Developed a backend application to manage customer accounts and perform deposit, withdrawal, and balance inquiry operations.</li>
-          <li>Built RESTful APIs using Spring Boot for creating customers, managing accounts, and processing transactions.</li>
-          <li>Designed a MySQL database and used Spring Data JPA to store and retrieve customer and account information.</li>
-          <li>Implemented unit tests using JUnit and applied object-oriented principles to write clean, maintainable code.</li>
-        </ul>
-        <div class="r-row"><b>Real-Time Vehicle Speed Monitoring System</b><span>Embedded C, KL43Z, UART, Linux</span></div>
-        <ul>
-          <li>Engineered a real-time embedded system on the KL43Z microcontroller to simulate vehicle speed detection using dual-sensor input.</li>
-          <li>Designed interrupt-driven GPIO (ISRs) and hardware timers to measure time of flight and compute speed.</li>
-          <li>Integrated ADC-based input for dynamic speed-limit control and implemented LED alerts for overspeed detection.</li>
-          <li>Built UART communication with a Linux system to transmit and log structured vehicle data.</li>
-        </ul>
-        <div class="r-row"><b>Library Management System</b><span>Java</span></div>
-        <ul>
-          <li>Developed a console-based system with full CRUD operations and search functionality.</li>
-          <li>Implemented loan and return workflows using Java Collections and file I/O.</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Experience</h4>
-        <div class="r-row"><b>Quality Engineering Intern</b><span>Fall 2026 – Winter 2027</span></div>
-        <div class="r-row"><i>Aviva</i></div>
-      </div>
-    </article>
-  </section>
-</div></div></div>
-</div>
-
-<!-- ======================= C: GOALS & PORTFOLIOS ======================= -->
-<div class="page" data-page="goals" hidden>
-  <header class="page-head"><div class="wrap">
-    <div class="crumbs"><a href="#home" data-go="home">← Home</a><span>03 / Goals &amp; Portfolios</span></div>
-    <span class="eyebrow">03 — Goals &amp; Portfolios</span>
-    <h1 class="page-title">Goals &amp; Portfolios</h1>
-  </div></header>
-
-  <div class="wrap"><div class="page-grid">
-    <nav class="rail" aria-label="On this page"><h4>On this page</h4></nav>
-    <div class="page-main">
-
-      <section class="block" id="why-computer-engineering">
-        <h2>Why I Chose Computer Engineering</h2>
-        <div class="prose">
-          <p></p>
-        </div>
-      </section>
-
-      <section class="block" id="career-goals">
-        <h2>Career Goals</h2>
-        <div class="prose">
-          <p></p>
-        </div>
-      </section>
-
-      <section class="block" id="interests-skills">
-        <h2>Interests and Skills Assessment Results</h2>
-        <div class="prose">
-          <p></p>
-        </div>
-      </section>
-
-      <section class="block" id="personal-development">
-        <h2>Personal Development Goals</h2>
-        <div class="prose">
-          <p></p>
-        </div>
-      </section>
-
-    </div>
-  </div></div>
-</div>
-
-<!-- ======================= D: REFLECTIONS ======================= -->
-<div class="page" data-page="reflections" hidden>
-  <header class="page-head"><div class="wrap">
-    <div class="crumbs"><a href="#home" data-go="home">← Home</a><span>04 / Reflections</span></div>
-    <span class="eyebrow">04 — Reflections</span>
-    <h1 class="page-title">Reflections</h1>
-  </div></header>
-</div>
-
-<!-- ======================= E: COURSE PROJECTS ======================= -->
-<div class="page" data-page="projects" hidden>
-  <header class="page-head"><div class="wrap">
-    <div class="crumbs"><a href="#home" data-go="home">← Home</a><span>05 / Course Projects</span></div>
-    <span class="eyebrow">05 — Course Projects</span>
-    <h1 class="page-title">Course Projects</h1>
-  </div></header>
-</div>
-
-<!-- ======================= 06: CONTACT ======================= -->
-<div class="page" data-page="contact" hidden>
-  <header class="page-head"><div class="wrap">
-    <div class="crumbs"><a href="#home" data-go="home">← Home</a><span>06 / Contact</span></div>
-    <span class="eyebrow">06 — Contact</span>
-    <h1 class="page-title">Let's build something.</h1>
-    <p class="lede">I'm looking for a co-op role in software development or applied AI. If you'd like to talk about a position, a project, or my work, reach out.</p>
-  </div></header>
+<section id="about">
   <div class="wrap">
-    <div class="page-grid">
-      <nav class="rail" aria-label="On this page"><h4>On this page</h4></nav>
-      <div class="page-main">
-        <section class="block" data-label="Get in touch">
-          <div class="contact-grid">
-            <div class="contact-card dk">
-              <h4>Email</h4>
-              <h3>Write to me</h3>
-              <span class="copy"><code id="emailContact" style="background:#2A251F;color:#F4EFE4">yashikakapoor2006@gmail.com</code></span>
-            </div>
-            <div class="contact-card">
-              <h4>Profiles</h4>
-              <h3>Find me online</h3>
-              <p><a href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">linkedin.com/in/yashika-kapoor-958767329</a></p>
-              <p><a href="https://github.com/yashikakapoor02" target="_blank" rel="noopener">github.com/yashikakapoor02</a></p>
-            </div>
-            <div class="contact-card">
-              <h4>Résumé</h4>
-              <h3>Current résumé</h3>
-              <p>The latest version, updated for my co-op term.</p>
-              <p><a href="#career" data-go="career:resume">Open the résumé →</a></p>
-            </div>
-            <div class="contact-card">
-              <h4>Location</h4>
-              <h3>Ontario, Canada</h3>
-              <p>York University, Keele Campus, Toronto. Open to in-person, hybrid, and remote co-op roles.</p>
-            </div>
-          </div>
-        </section>
+    <div class="section-head"><span class="eyebrow">01 · About me</span><h2>A little about my journey.</h2><p>My background, what I am learning and the direction I want to grow in.</p></div>
+    <div class="about-grid">
+      <div class="prose">
+        <p>I'm pursuing a Bachelor of Engineering in Computer Engineering at York University's Lassonde School of Engineering. Through coursework and projects, I've explored software development, embedded systems, programming and working with data.</p>
+        <p>My current role as a Quality Engineering Intern at Aviva is giving me the opportunity to learn how software is tested in a professional environment. I'm developing my understanding of test cases, defect reporting, test results and how quality engineers work with developers.</p>
+        <p>I enjoy understanding how systems work, solving problems step by step and improving my technical skills through hands-on experience. I'm particularly interested in software quality engineering and software development.</p>
       </div>
+      <div class="info-card"><h3>Education</h3><div class="detail"><span>Degree</span><strong>Bachelor of Engineering</strong></div><div class="detail"><span>Program</span><strong>Computer Engineering</strong></div><div class="detail"><span>Institution</span><strong>York University</strong></div><div class="detail"><span>School</span><strong>Lassonde School of Engineering</strong></div><div class="detail"><span>Expected graduation</span><strong>April 2028</strong></div></div>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Programming</h3><p>Java, Python, C/C++, SQL, MATLAB</p></div>
+      <div class="skill"><h3>Software &amp; backend</h3><p>Spring Boot, REST APIs, MySQL, FastAPI</p></div>
+      <div class="skill"><h3>Testing &amp; tools</h3><p>Playwright, Selenium, Git, GitHub, Postman</p></div>
+      <div class="skill"><h3>AI &amp; data</h3><p>RAG, LangChain, ChromaDB, embeddings</p></div>
     </div>
   </div>
-</div>
+</section>
 
+<section class="alt" id="experience">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">02 · Career</span><h2>Learning through experience.</h2><p>My education and current co-op experience are helping me connect classroom concepts with professional engineering practices.</p></div>
+    <div class="timeline"><div class="date">Fall 2026 – Winter 2027</div><div><h3>Quality Engineering Intern</h3><div class="org">Aviva · Canada</div><p>Working as part of a Quality Engineering team and developing practical experience with software testing and team workflows.</p><ul class="list"><li>Writing, reviewing and executing test cases to check that software behaves as expected.</li><li>Identifying and reporting defects and communicating findings to support investigation.</li><li>Analyzing test results and working with developers as part of the quality process.</li><li>Building familiarity with test automation tools, including Selenium and Playwright.</li></ul><div class="tags"><span class="tag">Quality Engineering</span><span class="tag">Test cases</span><span class="tag">Defect reporting</span><span class="tag">Playwright</span><span class="tag">Selenium</span></div></div></div>
+    <div class="timeline"><div class="date">September 2024 – Present</div><div><h3>Bachelor of Engineering, Computer Engineering</h3><div class="org">York University · Lassonde School of Engineering</div><p>Coursework and hands-on projects have included object-oriented programming, data structures, embedded systems, software development and engineering problem-solving.</p></div></div>
+  </div>
+</section>
+
+<section id="goals">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">03 · Goals &amp; portfolios</span><h2>Where I want to grow.</h2><p>My interests, strengths and development priorities shape the kind of engineer I want to become.</p></div>
+    <div class="prose"><p>I chose Computer Engineering because it brings together software and hardware and gives me the opportunity to understand how technology works at different levels. I enjoy moving from an idea to a working system, testing it and figuring out how to improve it.</p></div>
+    <div class="goal-grid" style="margin-top:28px">
+      <article class="goal-card"><span class="number">01 · CAREER DIRECTION</span><h3>Software quality engineering</h3><p>Continue developing my testing skills and learn how automation, careful test design and collaboration contribute to reliable software.</p></article>
+      <article class="goal-card"><span class="number">02 · TECHNICAL GROWTH</span><h3>Build stronger software skills</h3><p>Strengthen my foundations in Java, backend development, APIs, databases and test automation through coursework and practical projects.</p></article>
+      <article class="goal-card"><span class="number">03 · LONG-TERM INTEREST</span><h3>Explore intelligent systems</h3><p>Keep learning about AI-enabled applications and how technologies such as retrieval-augmented generation can be used in practical software systems.</p></article>
+    </div>
+    <div class="focus"><h3>My personal development priorities</h3><p>I'm working on critical thinking and problem solving by breaking issues into smaller parts and using approaches such as the 5 Whys. I also want to keep improving my communication, especially when explaining test findings, and strengthen collaboration by learning from teammates and contributing clearly during team discussions.</p></div>
+  </div>
+</section>
+
+<section class="alt" id="reflections">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">04 · Reflections</span><h2>What I am learning along the way.</h2><p>Reflection helps me connect my experiences to the skills I want to develop as an engineer.</p></div>
+    <div class="reflection">
+      <article class="card"><div class="label">Co-op learning · Aviva</div><h3>Understanding software quality</h3><p>My co-op experience is helping me see that testing is more than checking whether a feature works. It involves understanding expected behaviour, reviewing test cases, documenting defects clearly and communicating with developers. As I continue in the role, I want to become more confident in explaining test results and understanding the reasoning behind test coverage.</p></article>
+      <article class="card"><div class="label">Problem solving</div><h3>Learning to investigate, not guess</h3><p>Engineering projects have shown me the importance of breaking a problem into smaller steps, testing assumptions and using evidence to find the source of an issue. I want to apply this approach more consistently, including techniques such as the 5 Whys.</p></article>
+      <article class="card"><div class="label">Communication &amp; teamwork</div><h3>Making technical work understandable</h3><p>Working on projects and learning in a team environment has reinforced that technical knowledge is only part of engineering. Explaining an issue clearly, listening to other perspectives and sharing progress are also important parts of completing work effectively.</p></article>
+      <article class="card"><div class="label">Looking ahead</div><h3>Turning feedback into progress</h3><p>I want to use feedback from coursework, project work and my co-op placement to identify what I should improve next. My focus is on building confidence through practice while staying open to learning new tools and approaches.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">05 · Course projects</span><h2>Projects that put ideas into practice.</h2><p>A selection of academic and technical projects that helped me explore software, embedded systems and application development.</p></div>
+    <div class="project-grid">
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Embedded systems · Arduino</div><h3>Automatic Plant Watering System</h3><p>A system that monitors soil moisture and controls a water pump based on sensor readings.</p><h4>What I worked on</h4><ul><li>Used soil moisture sensor readings to inform watering decisions.</li><li>Implemented event-driven Java control logic for system states.</li><li>Used serial output and a multimeter to help debug system behaviour.</li><li>Used MATLAB to graph moisture readings over time.</li></ul><div class="tags"><span class="tag">Arduino</span><span class="tag">Java</span><span class="tag">MATLAB</span><span class="tag">Sensors</span><span class="tag">Debugging</span></div></div></article>
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Embedded C · KL43Z</div><h3>Vehicle Speed Monitoring System</h3><p>An embedded system that estimates vehicle speed using sensor input and provides an alert when a configured speed limit is exceeded.</p><h4>What I worked on</h4><ul><li>Used dual time-of-flight sensors and hardware timers to measure speed.</li><li>Worked with GPIO interrupts and an ADC input for speed-limit control.</li><li>Implemented an LED alert for overspeed conditions.</li><li>Used UART communication to send structured data to a Linux system for logging.</li></ul><div class="tags"><span class="tag">Embedded C</span><span class="tag">KL43Z</span><span class="tag">UART</span><span class="tag">Linux</span></div></div></article>
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Backend · Generative AI</div><h3>Enterprise Knowledge Assistant</h3><p>A retrieval-augmented generation (RAG) application designed to help users retrieve information from a document knowledge base.</p><h4>Technologies explored</h4><ul><li>Used Python and LangChain as part of the application workflow.</li><li>Worked with document processing and a ChromaDB vector store.</li><li>Used FastAPI for backend integration and the OpenAI API for language-model functionality.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span><span class="tag">RAG</span></div></div></article>
+      <article class="project"><div class="project-top"></div><div class="project-content"><div class="project-meta">Application development · Java</div><h3>Library Management System</h3><p>A console-based application for managing library records and common book-lending tasks.</p><h4>What I worked on</h4><ul><li>Implemented create, read, update and delete operations.</li><li>Added search functionality for finding library records.</li><li>Used Java Collections and file input/output for data handling.</li><li>Implemented loan and return workflows.</li></ul><div class="tags"><span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Collections</span><span class="tag">File I/O</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">06 · Contact</span><h2>Let's connect.</h2><p>I'm happy to connect about engineering, software quality, projects and opportunities to learn and grow.</p></div>
+    <div class="contact-grid">
+      <div class="contact-box"><small>Email</small><h3>Get in touch</h3><p><a href="mailto:yashikakapoor2006@gmail.com">yashikakapoor2006@gmail.com</a></p></div>
+      <div class="contact-box"><small>LinkedIn</small><h3>Professional profile</h3><p><a href="https://www.linkedin.com/in/yashika-kapoor-958767329/" target="_blank" rel="noopener">linkedin.com/in/yashika-kapoor-958767329 ↗</a></p></div>
+      <div class="contact-box"><small>GitHub</small><h3>Code and projects</h3><p><a href="https://github.com/yashikakapoor02" target="_blank" rel="noopener">github.com/yashikakapoor02 ↗</a></p></div>
+      <div class="contact-box"><small>Location</small><h3>Ontario, Canada</h3><p>York University · Lassonde School of Engineering</p></div>
+    </div>
+  </div>
+</section>
 </main>
-
-<footer class="foot">
-  <div class="wrap">
-    <div class="fl"><b>Yashika Kapoor</b><span class="copy"><code id="emailFoot" style="font-size:12.5px;padding:4px 10px">yashikakapoor2006@gmail.com</code></span></div>
-  </div>
-</footer>
-
+<footer><div class="wrap foot"><span><strong>Yashika Kapoor</strong> · Computer Engineering</span><span>Portfolio · Updated November 2026</span></div></footer>
 <script>
-(function(){
-  var rows = [
-    ["Plant Irrigation System","projects:p-irrigation",["DES","TOOL","INV","IMP"]],
-    ["Vehicle Speed Monitor","projects:p-speed",["PA","DES","TOOL","KB"]],
-    ["Bank Account API","projects:p-bank",["DES","TOOL","ETH","PROF"]],
-    ["Library Manager","projects:p-library",["KB","LLL"]],
-    ["Why I Chose Computer Engineering","goals:a-why",["LLL","PROF"]],
-    ["Career Goals","goals:a-career",["ECON","LLL"]],
-    ["SMART Goals","goals:a-smart",["ECON","LLL","COM"]],
-    ["Core Values","goals:a-values",["PROF","ETH"]],
-    ["EQ Reflection","goals:a-eq",["TEAM","COM","LLL"]],
-    ["Learning Style","goals:a-learning",["LLL","PROF"]],
-    ["Sustainability and Ethics","goals:a-ethics",["IMP","ETH"]],
-    ["Peer Mentoring","goals:a-mentor",["COM","TEAM","PROF"]]
-  ];
-  var cols=["KB","PA","INV","DES","TOOL","TEAM","COM","PROF","IMP","ETH","ECON","LLL"];
-  var tb=document.getElementById("matrixBody");
-  if(tb) rows.forEach(function(r){
-    var tr=document.createElement("tr"), td=document.createElement("td"), a=document.createElement("a");
-    a.href="#"+r[1].split(":")[0]; a.dataset.go=r[1]; a.textContent=r[0]; td.appendChild(a); tr.appendChild(td);
-    cols.forEach(function(c){var d=document.createElement("td");d.className="c";if(r[2].indexOf(c)>-1){d.textContent="●";d.setAttribute("aria-label","yes");}tr.appendChild(d);});
-    tb.appendChild(tr);
-  });
-
-  // build "on this page" rails
-  document.querySelectorAll("[data-page]").forEach(function(pg){
-    var rail=pg.querySelector(".rail"), main=pg.querySelector(".page-main");
-    if(!rail||!main) return;
-    var n=0;
-    main.querySelectorAll(":scope > section.block").forEach(function(sec){
-      var h=sec.querySelector(":scope > h2"), label=sec.dataset.label||(h&&h.textContent.replace(/^Portfolio \d+ · /,""));
-      if(!label) return;
-      if(!sec.id) sec.id=pg.dataset.page+"-s"+(++n);
-      var a=document.createElement("a"); a.href="#"+pg.dataset.page; a.dataset.go=pg.dataset.page+":"+sec.id; a.textContent=label; rail.appendChild(a);
-    });
-  });
-
-  var pages=[].slice.call(document.querySelectorAll("[data-page]"));
-  var nav=document.getElementById("mainnav"), menuBtn=document.getElementById("menuBtn");
-  function closeMenu(){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.textContent="Menu"; }
-  function go(target){
-    var parts=String(target||"home").split(":"), p=parts[0], sub=parts[1];
-    if(!pages.some(function(el){return el.dataset.page===p;})) p="home";
-    pages.forEach(function(el){el.hidden = el.dataset.page!==p;});
-    document.querySelectorAll("[data-nav]").forEach(function(a){a.classList.toggle("on",a.dataset.nav===p);});
-    closeMenu();
-    try{ history.replaceState(null,"","#"+p); }catch(e){}
-    var el = sub && document.getElementById(sub);
-    if(el){ requestAnimationFrame(function(){ el.scrollIntoView({block:"start"}); }); }
-    else window.scrollTo(0,0);
-  }
-  document.addEventListener("click",function(e){
-    var a=e.target.closest("[data-go]");
-    if(a){ e.preventDefault(); go(a.dataset.go); return; }
-    if(e.target.id==="toTop"){ e.preventDefault(); window.scrollTo(0,0); return; }
-    if(cb){
-      var code=document.getElementById(cb.dataset.copy), txt=code.textContent;
-      var reset=function(){ setTimeout(function(){cb.textContent="Copy";},1600); };
-      var fallback=function(){ var r=document.createRange(); r.selectNodeContents(code); var s=getSelection(); s.removeAllRanges(); s.addRange(r); cb.textContent="Selected"; reset(); };
-      try{ navigator.clipboard.writeText(txt).then(function(){ cb.textContent="Copied"; reset(); },fallback); }catch(err){ fallback(); }
-      return;
-    }
-    if(e.target.closest(".notesBtn")){ setNotes(!document.body.classList.contains("clean")); return; }
-    if(nav.classList.contains("open") && !e.target.closest("#mainnav") && !e.target.closest("#menuBtn")) closeMenu();
-  });
-  menuBtn.addEventListener("click",function(){ var o=nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded",String(o)); menuBtn.textContent=o?"Close":"Menu"; });
-  function setNotes(clean){
-    document.body.classList.toggle("clean",clean);
-    try{ localStorage.setItem("yk-clean", clean ? "1" : "0"); }catch(e){}
-  }
-  var saved=null; try{ saved=localStorage.getItem("yk-clean"); }catch(e){}
-  setNotes(saved==="1");
-  go((location.hash||"#home").slice(1));
-})();
+const menu=document.getElementById('menu'), nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';}));
 </script>
-
 </body>
 </html>
